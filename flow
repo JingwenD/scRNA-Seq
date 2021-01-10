@@ -50,9 +50,9 @@ Doing this will treat all reads from the library, across flowcells, as one sampl
 #$ -l h_vmem = 64G
 
 
-cellranger count --id Y1_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y1 --sample Y1_TCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
+cellranger vdj --id Y1_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y1 --sample Y1_TCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
  --localcores 8 --localmem 64
  
-cellranger count --id Y2_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y2 --sample Y2_TCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
+cellranger vdj --id Y2_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y2 --sample Y2_TCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
  --localcores 8 --localmem 64
 ```
