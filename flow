@@ -56,3 +56,21 @@ cellranger vdj --id Y1_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y1 --sampl
 cellranger vdj --id Y2_TCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/TCR/Y2 --sample Y2_TCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
  --localcores 8 --localmem 64
 ```
+
+## 1.4 Cellranger count for BCR
+```{bash}
+#!/bin/bash
+#
+#$ -cwd
+#$ -N count_BCR
+#$ -pe smp 8
+#$ -q psoriasis.q
+#$ -l h_vmem = 64G
+
+
+cellranger vdj --id Y1_BCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/BCR/Y1 --sample Y1_BCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
+ --localcores 8 --localmem 64
+ 
+cellranger vdj --id Y2_BCR --fastqs /mnt/lustre/user/jdeng/PBMCsc/BCR/Y2 --sample Y2_BCR --reference /mnt/lustre/user/jdeng/PBMCsc/ref/refdata-cellranger-vdj-GRCh38-alts-ensembl-5.0.0
+ --localcores 8 --localmem 64
+```
