@@ -9,6 +9,6 @@
 # send email on start, end and fault
 #SBATCH --mail-user=jdeng@umcutrecht.nl
 cd /hpc/dla_lti/jdeng/scRNASeq/PBMC
-alias loadR4013.10="export PATH=/hpc/local/CentOS7/dla_lti/R-4.0.1/bin:$PATH && export R_LIBS_USER=/hpc/dla_lti/jdeng/.Rlib/R-4.0.1-Bioc-3.10 && module load rstudio/1.0.136"
-loadR4013.10
+alias loadR401_3.12="export PATH=/hpc/local/CentOS7/dla_lti/R-4.0.1/bin:$PATH && export R_LIBS_USER=/hpc/dla_lti/jdeng/.Rlib/R-4.0.1-Bioc-3.10 && module load rstudio/1.0.136"
+loadR401_3.12
 Rscript kBET.R
