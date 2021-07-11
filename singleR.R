@@ -82,3 +82,7 @@ for (i in celltype[2:length(celltype)]){
   marker<-rbind(marker,markerx)
 }
 write.csv(marker,file = "DEGs_PsOvsHC_celltype2.csv")
+
+###############Cluster-level annotation################
+labelfine_cluster <- SingleR(test=sce_for_SingleR, ref=ref, labels=ref$label.fine, clusters=all.big@meta.data$seurat_clusters)
+labelfine_cluster$labels
