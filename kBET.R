@@ -2,7 +2,7 @@ library(kBET)
 library(ggplot2)
 #data: a matrix (rows: samples, columns: features (genes))
 #batch: vector or factor with batch label of each cell 
-load("~/Project/10_SingleCell/outs/PBMC_merge.RData")
+load("/hpc/dla_lti/jdeng/scRNASeq/PBMC/PBMC_merge.RData")
 data<-t(as.matrix(all.big@assays$RNA@data))
 batch<-all.big@meta.data$batch
 
